@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="coursetype">
+        <item>专业课</item>
+        <item>公共课</item>
+        <item>公选课</item>
+        <item>非正式课</item>
+    </string-array>
+</resources>

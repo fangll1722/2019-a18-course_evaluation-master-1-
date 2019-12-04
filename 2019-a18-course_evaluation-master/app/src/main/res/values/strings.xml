@@ -47,6 +47,10 @@
     <string name="my_about">关于我们</string>
 
     <string name="coursedetail">课程详情</string>
+
+    <!--搜索页面-->
+    <string name="course_search">课程搜索</string>
+
     <!--足迹部分-->
     <string name="course_name">课程名称</string>
     <string name="check_details">查看详情</string>
