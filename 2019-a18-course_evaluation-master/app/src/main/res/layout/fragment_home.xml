@@ -7,7 +7,7 @@
    >
 
     <Button
-        android:id="@+id/textView4"
+        android:id="@+id/toSearchBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button_background_outline"
