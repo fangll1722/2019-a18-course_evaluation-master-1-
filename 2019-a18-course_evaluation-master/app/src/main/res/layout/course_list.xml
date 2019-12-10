@@ -107,9 +107,9 @@
                     android:layout_gravity="center"
                     android:isIndicator="true"
                     android:numStars="5"
+                    android:progressTint="@android:color/holo_orange_light"
                     android:rating="4.5"
-                    android:stepSize="0.5"
-                    android:progressTint="@android:color/holo_orange_light" />
+                    android:stepSize="0.5" />
 
                 <TextView
                     android:id="@+id/courseRatingTv"
@@ -122,6 +122,18 @@
                     android:textSize="12sp" />
 
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/course_id"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.084"
+                app:layout_constraintStart_toEndOf="@+id/relativeLayout2"
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
             <TextView
                 android:id="@+id/textView"
@@ -210,30 +222,12 @@
                 app:layout_constraintStart_toEndOf="@+id/courseInstrucImgView2"
                 app:layout_constraintTop_toBottomOf="@+id/teacherview" />
 
-            <TextView
-                android:id="@+id/courseRunDescription"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="4dp"
-                android:fontFamily="@font/nunitosans_bold"
-                android:textColor="@android:color/black"
-                android:textSize="13sp"
-                android:text="开设课程时间 Jan,2019"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/relativeLayout2"
-                app:layout_constraintTop_toBottomOf="@+id/courseInstructors" />
-
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/courseBtn1"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/button_background"
@@ -247,8 +241,7 @@
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/relativeLayout2"
-                app:layout_constraintTop_toBottomOf="@+id/courseRunDescription" />
+                app:layout_constraintStart_toEndOf="@+id/relativeLayout2" />
 
             <TextView
                 android:id="@+id/trialTv"

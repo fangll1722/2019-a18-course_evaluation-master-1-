@@ -37,4 +37,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    //西红柿追加开始
+    compile files('libs/fastjson-1.1.70.android.jar')
+    implementation 'com.squareup.okhttp:okhttp:2.0.0'
+    implementation 'com.lzy.net:okhttputils:+'
+    implementation 'com.lzy.net:okhttpserver:+'
+    //西红柿追加结束
 }
