@@ -9,6 +9,7 @@ public class CourseModel {
     private Integer com_num;//成员数
     private String academy;//学院
     private String detail;//明细
+    private String json; //课程Json
 
     public CourseModel(){}
 
@@ -74,5 +75,13 @@ public class CourseModel {
 
     public void setDetail(String detail) {
         this.detail = detail;
+    }
+
+    public String getJson() {
+        return json;
+    }
+
+    public void setJson(String json) {
+        this.json = json;
     }
 }
