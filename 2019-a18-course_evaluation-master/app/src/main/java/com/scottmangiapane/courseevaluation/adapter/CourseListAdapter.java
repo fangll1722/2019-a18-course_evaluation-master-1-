@@ -19,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 
+import com.alibaba.fastjson.JSON;
 import com.lzy.okhttputils.OkHttpUtils;
 import com.lzy.okhttputils.callback.BitmapCallback;
 import com.scottmangiapane.courseevaluation.ClassData.CourseModel;
@@ -58,39 +59,39 @@ public class CourseListAdapter extends ArrayAdapter<CourseModel> {
     最后只要返回一个view布局就可以。
      */
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        CourseModel courseListArray = getItem(position); //得到集合中指定位置的一组数据，并且实例化
+        CourseModel course = getItem(position); //得到集合中指定位置的一组数据，并且实例化
         View view = LayoutInflater.from(getContext()).inflate(R.layout.course_list_view_item,parent,false); //用布局裁剪器(又叫布局膨胀器)，将导入的布局裁剪并且放入到当前布局中
 
         TextView courseName = (TextView)view.findViewById(R.id.textView); //从裁剪好的布局里获取TextView布局Id
-        courseName.setText(courseListArray.getName()+"("+courseListArray.getCom_num()+"条评论)");
+        courseName.setText(course.getName()+"("+course.getCom_num()+"条评论)");
 
         TextView course_id = (TextView)view.findViewById(R.id.course_id); //从裁剪好的布局里获取TextView布局Id
-        course_id.setText(courseListArray.getCourseID().toString());
+        course_id.setText(course.getCourseID().toString());
 
         TextView teacherview = (TextView)view.findViewById(R.id.teacherview); //从裁剪好的布局里获取TextView布局Id
-        teacherview.setText(courseListArray.getTeacher());
+        teacherview.setText(course.getTeacher());
 
         RatingBar courseRatingBar = (RatingBar)view.findViewById(R.id.courseRatingBar); //从裁剪好的布局里获取TextView布局Id
-        courseRatingBar.setRating(courseListArray.getScore());
+        courseRatingBar.setRating(course.getScore());
 
         TextView courseRatingTv = (TextView)view.findViewById(R.id.courseRatingTv); //从裁剪好的布局里获取TextView布局Id
-        courseRatingTv.setText(courseListArray.getScore().toString());
+        courseRatingTv.setText(course.getScore().toString());
 
         TextView courseTitle = (TextView)view.findViewById(R.id.courseTitle); //从裁剪好的布局里获取TextView布局Id
-        courseTitle.setText(courseListArray.getAcademy());
+        courseTitle.setText(course.getAcademy());
 
         TextView courseDescription = (TextView)view.findViewById(R.id.courseDescription); //从裁剪好的布局里获取TextView布局Id
-        courseDescription.setText(courseListArray.getDetail());
+        courseDescription.setText(course.getDetail());
 
         AppCompatButton button =(AppCompatButton)view.findViewById(R.id.courseBtn1);
-        button.setTag(courseListArray.getCourseID().toString());
+        button.setTag(course.getCourseID().toString());
 
-        final int courseId=courseListArray.getCourseID();
+        final String courseJson = JSON.toJSONString(course);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ct, CourseDetailActivity.class);
-                intent.putExtra("courseID",courseId);
+                intent.putExtra("courseJson",courseJson);
                 ct.startActivity(intent);
             }
         });
