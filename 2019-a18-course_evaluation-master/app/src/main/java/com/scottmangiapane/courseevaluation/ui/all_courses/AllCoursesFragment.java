@@ -70,9 +70,6 @@ public class AllCoursesFragment extends Fragment {
                     //Toast.makeText(getActivity(), um.getName(), Toast.LENGTH_LONG).show();
                     CourseListAdapter adapter = new CourseListAdapter(getActivity(), R.layout.course_list_view_item, courseList);
                     list_view.setAdapter(adapter);
-
-
-
                 }
             } else {
                 Toast.makeText(getActivity(), "未获得数据，获取失败!", Toast.LENGTH_LONG).show();
