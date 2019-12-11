@@ -34,17 +34,17 @@ public class CourseDetailActivity extends AppCompatActivity implements View.OnCl
     private int num;
     private boolean flag = false;
     private String score, comment;
-    private int courseID;//课程ID
+    private String courseJson;//课程Json
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.fragment_coursedetail);
 
-        //取课程ID
+        //取课程Json
         Intent intent =getIntent();
-        courseID = intent.getIntExtra("courseID",0);
-        Toast.makeText(CourseDetailActivity.this, ""+courseID, Toast.LENGTH_LONG).show();
+        courseJson = intent.getStringExtra("courseJson");
+        Toast.makeText(CourseDetailActivity.this, courseJson, Toast.LENGTH_LONG).show();
 
         initView();
         initEvent();
