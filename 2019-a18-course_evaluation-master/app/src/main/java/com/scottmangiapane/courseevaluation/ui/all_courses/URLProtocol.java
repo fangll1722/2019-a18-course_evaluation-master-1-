@@ -1,4 +1,4 @@
-package com.scottmangiapane.courseevaluation.util.net;
+package com.scottmangiapane.courseevaluation.ui.all_courses;
 
 
 public class URLProtocol {

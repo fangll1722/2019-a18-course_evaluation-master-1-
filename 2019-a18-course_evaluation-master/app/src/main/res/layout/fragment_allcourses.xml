@@ -1,61 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/footprint_tab_star"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:orientation="vertical"
     >
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/progressCard"
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_medium"
-        android:layout_marginTop="@dimen/margin_small"
-        android:layout_marginBottom="@dimen/margin_small"
-        android:layout_marginEnd="@dimen/margin_medium"
-        android:visibility="visible"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="5dp">
-
-
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="1dp">
-            <include
+            android:orientation="vertical">
+
+
+            <name.quanke.app.libs.emptylayout.EmptyLayout
+                android:id="@+id/emptyLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                layout="@layout/course_list"/>
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="#00000000"
+                    android:dividerHeight="10dp"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:id="@+id/list_view">
+
+                </ListView>
+                <!--添加footer-->
+
+
+            </name.quanke.app.libs.emptylayout.EmptyLayout>
+
+
+
         </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/progressCard2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_medium"
-        android:layout_marginTop="@dimen/margin_small"
-        android:layout_marginEnd="@dimen/margin_medium"
-        android:layout_marginBottom="@dimen/margin_small"
-        android:visibility="visible"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="5dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="0dp">
-            <include
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                layout="@layout/course_list2" />
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-</LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,4 +1,4 @@
-package com.scottmangiapane.courseevaluation.util;
+package com.scottmangiapane.courseevaluation.ui.all_courses;
 
 import java.util.List;
 import java.util.Map;

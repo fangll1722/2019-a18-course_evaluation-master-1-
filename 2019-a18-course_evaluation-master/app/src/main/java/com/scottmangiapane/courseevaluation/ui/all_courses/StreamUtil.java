@@ -1,4 +1,4 @@
-package com.scottmangiapane.courseevaluation.util.net;
+package com.scottmangiapane.courseevaluation.ui.all_courses;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;

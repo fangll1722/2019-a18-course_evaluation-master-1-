@@ -1,4 +1,4 @@
-package com.scottmangiapane.courseevaluation.util.net;
+package com.scottmangiapane.courseevaluation.ui.all_courses;
 
 import android.os.Handler;
 import android.os.Message;
@@ -6,14 +6,10 @@ import android.os.Message;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 
-import org.json.JSONObject;
-
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
