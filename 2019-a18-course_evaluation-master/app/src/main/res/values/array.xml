@@ -35,7 +35,6 @@
         <item>1分</item>
     </string-array>
 
-
     <string-array name="inspectionWay">
         <item>开卷考试</item>
         <item>闭卷考试</item>
@@ -47,4 +46,12 @@
         <item>其他</item>
     </string-array>
 
+    <!--搜索课程部分-->
+
+    <string-array name="coursetype">
+        <item>专业课</item>
+        <item>公共课</item>
+        <item>公选课</item>
+        <item>非正式课</item>
+    </string-array>
 </resources>

@@ -1,8 +1,5 @@
 package com.scottmangiapane.courseevaluation.adapter;
 
-/**
- * Created by gdszm on 2019/3/29.
- */
 
 import android.content.Context;
 import android.content.Intent;
@@ -30,9 +27,6 @@ import java.util.List;
 
 import okhttp3.Response;
 
-/**
- * Created by prize on 2018/4/11.
- */
 
 public class CourseListAdapter extends ArrayAdapter<CourseModel> {
     private int recourceId;

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.scottmangiapane.courseevaluation">
-
+    <uses-permission android:name="android.permission.INTERNET">
+    </uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -37,10 +38,15 @@
             android:label="@string/my_password"/>
         <activity
             android:name=".CourseDetailActivity"
-            android:label="@string/coursedetail"/>
+            android:label="@string/coursedetail"
+            android:parentActivityName=".MainActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.scottmangiapane.courseevaluation.MainActivity"/>
+            </activity>
         <activity
             android:name=".SearchActivity"
-            android:label="@string/course_search"  />
+            android:label="@string/course_search"/>
     </application>
 
 </manifest>

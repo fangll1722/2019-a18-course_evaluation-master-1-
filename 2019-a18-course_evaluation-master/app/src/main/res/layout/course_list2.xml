@@ -81,7 +81,7 @@
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="12sp"
-            android:text="计算机网络基础"
+            android:text=""
             app:layout_constraintEnd_toEndOf="@+id/relativeLayout2"
             app:layout_constraintStart_toStartOf="@+id/relativeLayout2"
             app:layout_constraintTop_toBottomOf="@+id/courseTitle" />
@@ -129,7 +129,7 @@
             android:layout_height="wrap_content"
             fontPath="fonts/nunitosans_semibold.ttf"
             android:layout_marginTop="4dp"
-            android:text="@string/course_name"
+            android:text="@string/department"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -199,7 +199,7 @@
             android:id="@+id/courseInstructors"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:fontFamily="@font/nunitosans_semibold"
             android:textColor="@android:color/black"
@@ -248,7 +248,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/relativeLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/courseRunDescription" />
+            app:layout_constraintTop_toBottomOf="@+id/courseRunDescription"
+            android:focusable="false"/>
 
         <TextView
             android:id="@+id/trialTv"

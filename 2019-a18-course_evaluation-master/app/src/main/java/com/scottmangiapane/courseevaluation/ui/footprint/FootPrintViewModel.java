@@ -17,7 +17,7 @@ public class FootPrintViewModel extends ViewModel {
         mText = new MutableLiveData<>();
         mText.setValue("教师所属");
 
-       Footprint user_one=new Footprint(2,"数据库原理","李建国",4.5);
+       Footprint user_one=new Footprint(2,"数据库原理","李建国",4.5,"aaaa");
 
         collect=new MutableLiveData<>();
         collect.setValue(user_one);

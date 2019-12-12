@@ -6,8 +6,9 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:orientation="vertical"
+
     >
-    <!--顶部导航栏-->
+
     <com.google.android.material.tabs.TabLayout
 
         android:layout_width="match_parent"
@@ -31,12 +32,7 @@
 
     </com.google.android.material.tabs.TabLayout>
 
-    <!--FrameLayout
-        android:id="@+id/footprint_content"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-    </FrameLayout-->
+    <!--顶部导航栏-->
 
 
     <androidx.viewpager.widget.ViewPager
@@ -44,6 +40,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-</androidx.viewpager.widget.ViewPager>
+    </androidx.viewpager.widget.ViewPager>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

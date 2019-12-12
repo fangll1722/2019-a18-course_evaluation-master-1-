@@ -21,8 +21,8 @@
     <string name="signed">已有账号，直接登录</string>
 
     <!--登录页面-->
-    <string name="login_header"><u>课程点评  |</u></string>
-    <string name="login_welcome"><u>欢迎登录课程点评平台</u></string>
+    <string name="login_header">课程点评  |</string>
+    <string name="login_welcome">欢迎登录</string>
     <string name="account_default">输入账号</string>
     <string name="password_default">输入密码</string>
     <string name="password_forgot">忘记密码?</string>
@@ -36,8 +36,16 @@
 
     <!--首页-->
     <string name="search_lesson">🔍搜索课程</string>
-    <string name="lessons_rec"><u>推荐课程</u></string>
+    <string name="lessons_rec">推荐课程</string>
 
+    <string name="operating_system">操作系统</string>
+    <string name="computer_network">计算机网络</string>
+    <string name="complier_theory">编译原理</string>
+    <string name="database_practice">数据库系统实践</string>
+
+
+    <!--搜索页面-->
+    <string name="course_search">课程搜索</string>
 
     <!--我的页面-->
     <string name="my_major">我的学校和专业</string>
@@ -47,13 +55,13 @@
     <string name="my_about">关于我们</string>
 
     <string name="coursedetail">课程详情</string>
-
-    <!--搜索页面-->
-    <string name="course_search">课程搜索</string>
     <!--足迹部分-->
     <string name="course_name">课程名称</string>
     <string name="check_details">查看详情</string>
     <string name="course_instructor">任课教师</string>
+    <string name="department">开设学院</string>
+    <string name="retry">刷新试试</string>
+    <string name="go_homepage">前往首页</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

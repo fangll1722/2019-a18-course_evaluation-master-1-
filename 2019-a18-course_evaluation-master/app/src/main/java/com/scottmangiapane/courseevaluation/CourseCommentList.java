@@ -14,7 +14,7 @@ public class CourseCommentList extends LinearLayout implements View.OnClickListe
 
     private ImageView iv_head;
     private TextView tv_username,tv_commentdate,tv_myscore,tv_mycomment;
-    private Button btn_coursecollect,btn_like;
+    private Button btn_course_good,btn_course_bad;
     private Context context;
 
     public CourseCommentList(Context context) {
@@ -26,13 +26,8 @@ public class CourseCommentList extends LinearLayout implements View.OnClickListe
     }
 
     private void initEvent() {
-        iv_head.setImageResource(R.drawable.img_myhead);
-        tv_myscore.setText("5分");
-        tv_mycomment.setText("老师人很好，很少作业");
-        tv_commentdate.setText("2018-12-12");
-        tv_username.setText("听见下雨的声音");
-        btn_coursecollect.setOnClickListener(this);
-        btn_like.setOnClickListener(this);
+        btn_course_good.setOnClickListener(this);
+        btn_course_bad.setOnClickListener(this);
     }
 
     private void initView() {
@@ -41,21 +36,43 @@ public class CourseCommentList extends LinearLayout implements View.OnClickListe
         tv_commentdate=(TextView)findViewById(R.id.tv_commentdate);
         tv_myscore=(TextView)findViewById(R.id.tv_myscore);
         tv_mycomment=(TextView)findViewById(R.id.tv_mycomment);
-        btn_coursecollect=(Button)findViewById(R.id.btn_coursecollect);
-        btn_like=(Button)findViewById(R.id.btn_like);
+        btn_course_good=(Button)findViewById(R.id.btn_course_good);
+        btn_course_bad=(Button)findViewById(R.id.btn_course_bad);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btn_coursecollect:
-                btn_coursecollect.setEnabled(false);
+            case R.id.btn_course_good:
+                btn_course_good.setEnabled(false);
                 break;
-            case R.id.btn_like:
-                btn_like.setEnabled(false);
+            case R.id.btn_course_bad:
+                btn_course_bad.setEnabled(false);
                 break;
         }
     }
 
+    public void setData(int imgID,String myscore,String mycomment,String commentdate,String username){
+        switch (imgID) {
+            case 1:
+                iv_head.setImageResource(R.drawable.img_myhead1);
+            case 2:
+                iv_head.setImageResource(R.drawable.img_myhead2);
+            case 3:
+                iv_head.setImageResource(R.drawable.img_myhead3);
+            case 4:
+                iv_head.setImageResource(R.drawable.img_myhead4);
+            case 5:
+                iv_head.setImageResource(R.drawable.img_myhead5);
+            case 6:
+                iv_head.setImageResource(R.drawable.img_myhead6);
+            case 7:
+                iv_head.setImageResource(R.drawable.img_myhead7);
+        }
+        tv_myscore.setText(myscore);
+        tv_mycomment.setText(mycomment);
+        tv_commentdate.setText(commentdate);
+        tv_username.setText(username);
+    }
 
 }

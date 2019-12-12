@@ -11,9 +11,11 @@ public class CourseModel {
     private String detail;//明细
     private String json; //课程Json
 
+
+
     public CourseModel(){}
 
-        public Integer getCourseID() {
+    public Integer getCourseID() {
         return courseID;
     }
 
@@ -76,7 +78,7 @@ public class CourseModel {
     public void setDetail(String detail) {
         this.detail = detail;
     }
-
+   
     public String getJson() {
         return json;
     }
